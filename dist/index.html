@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="bg-black">
+    <div class="flex justify-center items-center w-screen h-screen">
+      <div
+        class="bg-slate-50 w-[350px] min-h-[350px] rounded-xl shadow-2xl shadow-purple-700 p-5 flex flex-col justify-evenly items-center"
+        id="maindiv"
+      >
+        <div class="text-2xl font-semibold font-sans">QR code Generator</div>
+        <h2>Paste a link or text to create QR code</h2>
+        <input
+          type="search"
+          class="border-[1px] border-gray-900 outline-none rounded-md px-4 py-1 w-[245px] h-[40px]"
+          placeholder="Enter text"
+          id="text"
+        />
+        <button
+          class="bg-purple-700 text-white px-4 py-2 rounded-xl font-semibold hover:bg-green-600 hover:text-black w-[245px] h-[40px]"
+          id="btn"
+        >
+          Generate QR Code
+        </button>
+        <button
+          class="bg-green-400 text-black px-4 py-2 rounded-xl font-semibold hover:bg-red-500 w-[245px] h-[40px]"
+          id="btn1"
+        >
+          Reset
+        </button>
+        <!-- it wont work until display remove from none or hidden -->
+        <div
+          class="p-5 hidden justify-center items-center border border-gray-600 rounded-lg w-[300px]"
+          id="imgdiv"
+        >
+          <img id="img" src="" class="h-[140px] w-[140px]" />
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
